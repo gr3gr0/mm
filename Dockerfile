@@ -1,10 +1,12 @@
-FROM node:latest
+FROM debian:latest
 
 ENV NODE_ENV production
 ENV MM_PORT 8080
 
 WORKDIR /opt/magic_mirror
 
+RUN apt-get update && apt-get upgrade
+RUN apt-get install -y node nano nodejs
 RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
 
 RUN cp -R modules /opt/magic_mirror/unmount_modules
