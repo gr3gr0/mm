@@ -6,7 +6,7 @@ ENV MM_PORT 8080
 WORKDIR /opt/magic_mirror
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y curl
+RUN apt-get install -y curl gnupg gnupg1 gnupg2
 RUN curl -sL https://deb.nodesource.com/setup_9.x | bash
 RUN apt-get install -y git-core build-essential python nodejs
 RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
