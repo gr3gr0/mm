@@ -5,7 +5,7 @@ ENV MM_PORT 8080
 
 WORKDIR /opt/magic_mirror
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y node nano nodejs
 RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
 
