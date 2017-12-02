@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM node:latest
 
 ENV NODE_ENV production
 ENV MM_PORT 8080
