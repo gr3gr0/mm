@@ -6,6 +6,7 @@ ENV MM_PORT 8080
 WORKDIR /opt/magic_mirror
 
 RUN apt-get update && apt-get upgrade -y
+RUN apt-get install git-core
 RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
 
 RUN cp -R modules /opt/magic_mirror/unmount_modules
